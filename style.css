@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dfe4ea;
+    color: #252525;
+}
+
+
+/* =========================
+   CV CONTAINER
+========================= */
+
+.cv-container {
+    width: 850px;
+    min-height: 1100px;
+    margin: 40px auto;
+    display: flex;
+    background: #f3e9da;
+    box-shadow: 0 0 20px rgba(10, 10, 10, 0.35);
+}
+
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.left-section {
+    width: 32%;
+    background: #102f2b;
+    color: #f4f1e8;
+    padding: 35px 25px;
+}
+
+
+/* PROFILE */
+
+.profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: none;
+    opacity: 1;
+    filter: none;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    opacity: 1;
+    filter: none;
+}
+.profile h1 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: #f4f1e8;
+}
+
+.job-title {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+
+/* =========================
+   LEFT HEADINGS
+========================= */
+
+.left-section h2 {
+    color: #d6b56a;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #536d68;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+}
+
+.contact,
+.skills {
+    margin-bottom: 40px;
+}
+
+.contact p,
+.skills p {
+    color: #c8cecc;
+    font-size: 13px;
+    margin-bottom: 13px;
+    line-height: 1.5;
+}
+
+.skills p::before {
+    content: "• ";
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.right-section {
+    width: 68%;
+    padding: 50px 45px;
+    background: #eeeae0;
+}
+
+.right-section section {
+    margin-bottom: 45px;
+}
+
+.right-section h2 {
+    font-size: 21px;
+    letter-spacing: 2px;
+    color: #102f2b;
+    border-bottom: 2px solid #d6b56a;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.right-section p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #4b514f;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #d6b56a;
+}
+
+.education-item h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+    color: #102f2b;
+}
+
+.education-item h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #6b726f;
+}
+
+.education-item p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #d6b56a;
+}
+
+.experience-item h3 {
+    font-size: 17px;
+    color: #102f2b;
+    margin-bottom: 6px;
+}
+
+.experience-item h4 {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.experience-duration {
+    font-size: 13px !important;
+    color: #777 !important;
+    margin-bottom: 12px;
+}
+
+.experience-item ul {
+    padding-left: 18px;
+}
+
+.experience-item li {
+    font-size: 13px;
+    color: #4b514f;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   COMING SOON
+========================= */
+
+.coming-soon {
+    color: #888 !important;
+    font-style: italic;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .cv-container {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+}
