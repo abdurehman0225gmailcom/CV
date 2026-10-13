@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +11,7 @@ body {
     color: #252525;
 }
 
-
-/* =========================
-   CV CONTAINER
-========================= */
+/* CV CONTAINER */
 
 .cv-container {
     width: 850px;
@@ -24,10 +22,7 @@ body {
     box-shadow: 0 0 20px rgba(10, 10, 10, 0.35);
 }
 
-
-/* =========================
-   LEFT SECTION
-========================= */
+/* LEFT SECTION */
 
 .left-section {
     width: 32%;
@@ -36,34 +31,40 @@ body {
     padding: 35px 25px;
 }
 
-
-/* PROFILE */
+/* PROFILE IMAGE */
 
 .profile {
     text-align: center;
     margin-bottom: 40px;
 }
 
+/* Show the complete image, including its green background and gold circle */
 .profile-image {
     width: 180px;
-    height: 180px;
+    max-width: 100%;
+    height: auto;
     margin: 0 auto 20px;
-    border-radius: 50%;
-    overflow: hidden;
+    padding: 0;
     border: none;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+    box-shadow: none;
+}
+
+.profile-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
     opacity: 1;
     filter: none;
 }
 
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 50%;
-    opacity: 1;
-    filter: none;
-}
 .profile h1 {
     font-size: 25px;
     margin-bottom: 8px;
@@ -75,10 +76,7 @@ body {
     font-size: 14px;
 }
 
-
-/* =========================
-   LEFT HEADINGS
-========================= */
+/* LEFT HEADINGS */
 
 .left-section h2 {
     color: #d6b56a;
@@ -108,10 +106,7 @@ body {
     margin-right: 7px;
 }
 
-
-/* =========================
-   RIGHT SECTION
-========================= */
+/* RIGHT SECTION */
 
 .right-section {
     width: 68%;
@@ -138,10 +133,7 @@ body {
     color: #4b514f;
 }
 
-
-/* =========================
-   EDUCATION
-========================= */
+/* EDUCATION */
 
 .education-item {
     margin-bottom: 25px;
@@ -166,10 +158,7 @@ body {
     color: #777;
 }
 
-
-/* =========================
-   EXPERIENCE
-========================= */
+/* EXPERIENCE */
 
 .experience-item {
     margin-bottom: 25px;
@@ -206,37 +195,46 @@ body {
     margin-bottom: 5px;
 }
 
-
-/* =========================
-   COMING SOON
-========================= */
+/* COMING SOON */
 
 .coming-soon {
     color: #888 !important;
     font-style: italic;
 }
 
-
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
-
     .cv-container {
         width: 95%;
     }
+
+    .left-section {
+        padding: 30px 18px;
+    }
+
+    .right-section {
+        padding: 35px 25px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 180px;
+    }
 }
 
-
 @media (max-width: 650px) {
-
     .cv-container {
+        width: 95%;
         flex-direction: column;
     }
 
     .left-section,
     .right-section {
         width: 100%;
+    }
+
+    .profile-image {
+        width: 180px;
     }
 }
