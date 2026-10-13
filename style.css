@@ -237,4 +237,52 @@ body {
     .profile-image {
         width: 180px;
     }
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 8mm;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    .cv-container {
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        box-shadow: none;
+        display: flex;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .left-section,
+    .right-section {
+        min-width: 0;
+    }
+
+    .right-section {
+        padding: 25px 22px;
+    }
+
+    .right-section section {
+        margin-bottom: 25px;
+    }
+
+    .profile-image {
+        max-width: 100%;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 }
+
+
+
